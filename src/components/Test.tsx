@@ -18,14 +18,14 @@ export default function TestPage() {
         if(code == null) {
             return;
         }
-        const response = await axios.post('https://edusphere-backend-mww7.onrender.com/test',{
+        const response = await axios.post('https://edusphere-backend-alpha.vercel.app/test',{
             code : code
         });
         const token = response.data.token;
         
         setLoader(c => !c)
 
-        const result = await axios.get('https://edusphere-backend-mww7.onrender.com/getOutput',{
+        const result = await axios.get('https://edusphere-backend-alpha.vercel.app/getOutput',{
             headers : {
                 Authorization : token
             }

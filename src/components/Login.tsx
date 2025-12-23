@@ -16,7 +16,7 @@ export default function LogInPage() {
         const username = formData.get('username');
         const password = formData.get('password');
 
-        const response = await axios.post('https://edusphere-backend-mww7.onrender.com/signin', {
+        const response = await axios.post('https://edusphere-backend-alpha.vercel.app/signin', {
                 username : username,
                 password : password
         });

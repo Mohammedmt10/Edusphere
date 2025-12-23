@@ -18,7 +18,7 @@ export default function CourseContent() {
     const [lectures , setLectures] = useState([]);
 
     const getLec = async () => {
-        const response = await axios.get(`https://edusphere-backend-mww7.onrender.com/getLectures/${id}`, {
+        const response = await axios.get(`https://edusphere-backend-alpha.vercel.app/getLectures/${id}`, {
             headers : {
                 Authorization : localStorage.getItem('token')
             }

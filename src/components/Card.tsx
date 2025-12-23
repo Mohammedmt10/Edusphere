@@ -17,7 +17,7 @@ export default function CardElement(props : iCard) {
     const navigate = useNavigate();
 
     const onclickHandler = async () => {
-        const result = await axios.post('https://edusphere-backend-mww7.onrender.com/deleteCourse',{
+        const result = await axios.post('https://edusphere-backend-alpha.vercel.app/deleteCourse',{
             courseId : props._id
         }, {
             headers : {

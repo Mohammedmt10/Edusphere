@@ -14,7 +14,7 @@ interface LectureCardIf {
 export default function LectureCard(props : LectureCardIf) {
     const navigate = useNavigate();
     const deleteLecture = async () => {
-        const result = await axios.post(`https://edusphere-backend-mww7.onrender.com/deleteLecture`,{
+        const result = await axios.post(`https://edusphere-backend-alpha.vercel.app/deleteLecture`,{
             lectureId : props.lectureId
         }, {
             headers : {

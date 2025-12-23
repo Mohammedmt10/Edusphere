@@ -22,7 +22,7 @@ export default function CourseDetails() {
         let price = course.price || 1;
 
         price = price * 100;
-        const result = await axios.post('https://edusphere-backend-mww7.onrender.com/payment',{
+        const result = await axios.post('https://edusphere-backend-alpha.vercel.app/payment',{
             title : title,
             price : price,
             courseId : course._id
@@ -43,7 +43,7 @@ export default function CourseDetails() {
     }
 
     const courseDetails = async () => {
-        const response = await axios.get(`https://edusphere-backend-mww7.onrender.com/course/${id}`);
+        const response = await axios.get(`https://edusphere-backend-alpha.vercel.app/course/${id}`);
         const data = response.data.response ;
         if(data) {
             setCourse(data);

@@ -22,7 +22,7 @@ export default function NavBar() {
     }
     const userInfo = async () => {
         setLoading(true);
-        const response = await axios.get('https://edusphere-backend-mww7.onrender.com/me',{
+        const response = await axios.get('https://edusphere-backend-alpha.vercel.app/me',{
             headers : {
                 Authorization : localStorage.getItem('token')
             }

@@ -18,7 +18,7 @@ export default function CourseForm() {
         const price = Number(formData.get('price'));
         const imgUrl = formData.get('imgUrl');
 
-        const response = await axios.post('https://edusphere-backend-mww7.onrender.com/createCourse',{
+        const response = await axios.post('https://edusphere-backend-alpha.vercel.app/createCourse',{
             title : title,
             description : desc,
             price : price,
@@ -31,7 +31,7 @@ export default function CourseForm() {
 
 
         if(response.data.message == "course created") {
-            const result = await axios.post('https://edusphere-backend-mww7.onrender.com/buy',{
+            const result = await axios.post('https://edusphere-backend-alpha.vercel.app/buy',{
                 courseId :response.data._id
             }, {
                 headers : {

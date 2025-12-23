@@ -22,20 +22,21 @@ export default function NavBar() {
     }
     const userInfo = async () => {
         setLoading(true);
+        setTimeout(() => {
+            setLoading(false)
+        }, 1000);
         const response = await axios.get('https://edusphere-backend-alpha.vercel.app/me',{
             headers : {
-                Authorization : localStorage.getItem('token')
+                Authorization : localStorage.getItem('token') || ""
             }
         });
-    if(response.data.user) {
+        console.log("hi")
+        if(response.data.user) {
         setUsername(response.data.user.username)
         setloggedIn(true)
     } else {
         setloggedIn(false)
     }
-    setTimeout(() => {
-        setLoading(false)
-    }, 1000);
     
     }
     useEffect(() => {

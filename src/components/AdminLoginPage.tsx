@@ -16,7 +16,7 @@ export default function AdminLogIn() {
         const username = formData.get('username');
         const password = formData.get('password');
 
-        const response = await axios.post('https://edusphere-backend-mww7.onrender.com/adminsignin', {
+        const response = await axios.post('https://edusphere-backend-alpha.vercel.app/adminsignin', {
             username : username,
             password : password
         });

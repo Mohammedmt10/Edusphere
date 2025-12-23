@@ -18,7 +18,7 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
 
   const getAdminCourses = async () => {
-    const response = await axios.get('https://edusphere-backend-mww7.onrender.com/getAdminCourses',{
+    const response = await axios.get('https://edusphere-backend-alpha.vercel.app/getAdminCourses',{
       headers : {
         Authorization : localStorage.getItem('token')
       }

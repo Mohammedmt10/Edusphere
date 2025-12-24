@@ -41,7 +41,7 @@ export default function LectureCard(props : LectureCardIf) {
             </div>
         </div>
 
-        {props.deleteOption && <div className="mx-8 my-8 not-sm:mx-2 not-sm:my-4 bg-primary-400 text-BackgroundColor p-1 rounded h-fit z-[999]" onClick={deleteLecture}>
+        {props.deleteOption && <div className="mx-8 my-8 not-sm:mx-2 not-sm:my-4 bg-primary-400 text-BackgroundColor p-1 rounded h-fit z-[9]" onClick={deleteLecture}>
             <DeleteIcon />
         </div>}
     </div>

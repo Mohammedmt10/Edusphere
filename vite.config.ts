@@ -4,12 +4,19 @@ import react from '@vitejs/plugin-react';
 import ViteSitemap from 'vite-plugin-sitemap';
 import { createHtmlPlugin } from 'vite-plugin-html';
 
+const routes = [
+  { path: '/', name: 'Home' },
+  { path: '/codeEditor', name: 'codeEditor' },
+];
+const dynamicRoutes = routes.map(route => `/${route.path}`)
+
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
     ViteSitemap({
       hostname: 'https://https://edusphere-sandy.vercel.app/',
+      dynamicRoutes : dynamicRoutes,
       generateRobotsTxt: true,
     }),
     createHtmlPlugin({

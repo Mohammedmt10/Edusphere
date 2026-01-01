@@ -4,11 +4,6 @@ import react from '@vitejs/plugin-react';
 import ViteSitemap from 'vite-plugin-sitemap';
 import { createHtmlPlugin } from 'vite-plugin-html';
 
-const routes = [
-  { path: '/', name: 'Home' },
-  { path: '/about', name: 'About' },
-];
-
 export default defineConfig({
   plugins: [
     react(),

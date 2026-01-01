@@ -15,6 +15,7 @@ import AddLectures from "./components/addLectures"
 import PaymentSuccessfull from "./components/paymentSuccessfull"
 
 function App() {
+  
 
   return <div className="font-display">
     <BrowserRouter>
